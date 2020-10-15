@@ -4,10 +4,10 @@ import { MdEdit, MdDelete } from 'react-icons/md';
 const Item = ({ id, charge, amount }) => {
   // const { id, charge, amount } = expense;
   return (
-    <li>
+    <li className='item'>
       <div className='info'>
         <span className='expense'>{charge}</span>
-        <span className='amount'>{amount}</span>
+        <span className='amount'>${amount}</span>
       </div>
       <div>
         <button className='edit-btn' aria-label='Edit button'>
