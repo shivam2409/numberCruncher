@@ -1,9 +1,9 @@
 import React from 'react';
 import { MdSend } from 'react-icons/md';
 
-const Form = () => {
+const Form = ({ charge, amount, handleAmount, handleCharge, handleSubmit }) => {
   return (
-    <form action=''>
+    <form onSubmit={handleSubmit}>
       <div className='form-center'>
         <div className='form-group'>
           <label htmlFor='charge'>Charge</label>
@@ -13,16 +13,20 @@ const Form = () => {
             id='charge'
             className='form-control'
             placeholder='e.g. rent'
+            value={charge}
+            onChange={handleCharge}
           />
         </div>
         <div className='form-group'>
           <label htmlFor='amount'>Charge</label>
           <input
-            type='text'
+            type='number'
             name='amount'
             id='amount'
             className='form-control'
             placeholder='e.g. 100'
+            value={amount}
+            onChange={handleAmount}
           />
         </div>
       </div>
